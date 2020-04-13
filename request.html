@@ -22,3 +22,32 @@
 		<div class="header">
 			<h1>Request</h1>
 		</div>
+
+		<form action="submittedrequest.php" method="post" id="request-form">
+			<label for="hname" class="bold">Hospital Name</label><br>
+			<input type="text" id="hname" name="hospitalname" placeholder="Hospital's name" required>
+			<p class="bold">Items Needed:</p>
+
+			<input type="checkbox" id="blood-drive" name="blood-drive" value="blood=drive">
+			<label for="blood-drive">Blood Drive</label><br>
+			<input type="checkbox" id="gloves" name="gloves" value="gloves">
+			<label for="gloves">Gloves</label><br>
+			<input type="checkbox" id="masks" name="masks" value="masks">
+			<label for="masks">Masks</label><br>
+			<input type="checkbox" id="ventilators" name="ventilators" value="ventilators">
+			<label for="ventilators">Ventilators</label><br><br>
+
+			<label for="other" class="bold">Other Item</label><br>
+			<input type="text" id="other" name="other" placeholder="Item" required><br>
+			<label for="address" class="bold">Hospital Address</label><br>
+			<input type="text" id="address" name="address" placeholder="Address" required><br>
+			<input type="submit" value="Request" name="submit">
+		</form>
+
+		<div id="footer">
+			<p id="copyright">&copy; Oscar Chung</p>
+			<a href="#">Back to top</a>
+		</div>
+	</div>
+</body>
+</html>
