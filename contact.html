@@ -4,6 +4,7 @@
 <meta charset="utf-8" />
 <title>Contact Us</title>
 <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="scripts/contact.js"></script>
 </head>
 
 <body>
@@ -33,15 +34,15 @@
 
 			<div class="column">
 				<form action="submitted.php" method="post">
-					<label for="fname">First Name</label><br>
+					<label for="fname" class="bold">First Name</label><br>
 					<input type="text" id="fname" name="firstname" placeholder="Your name" required><br>
-					<label for="lname">Last Name</label><br>
+					<label for="lname" class="bold">Last Name</label><br>
 					<input type="text" id="lname" name="lastname" placeholder="Your last name" required><br>
-					<label for="email">Email</label><br>
+					<label for="email" class="bold">Email</label><br>
 					<input type="text" id="email" name="email" placeholder="Your email" required><br>
-					<label for="subject">Subject</label><br>
+					<label for="subject" class="bold">Subject</label><br>
 					<input type="text" id="subject" name="subject" placeholder="Subject of email" required><br>
-					<label for="message">Message</label><br>
+					<label for="message" class="bold">Message</label><br>
 					<textarea id="message" name="message" placeholder="Write your message here" style="height:200px" required></textarea><br>
 					<input type="submit" value="Send!" name="submit">
 				</form>
