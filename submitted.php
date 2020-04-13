@@ -9,23 +9,36 @@
 
 <?php
 
-if(isset($_POST['submit'])) {
-	$firstname = $_POST['firstname'];
-	$lastname = $_POST['lastname'];
-	$email = $_POST['email'];
-	$message = $_POST['message'];
-	$subject = $_POST['subject'];
-	
+define("DB_HOST", "localhost");
+define("DB_USERNAME", "root");
+define("DB_PASSWORD", "");
+define("DB_NAME", "contact");
 
-	$mailTo = "oscar.hansuh.chung@outlook.com";
-	$headers = "From: ".$email;
-	$finalmessage = "You have received an email from".$firstname." ".$lastname.".\n\n".$message;
+$con = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
-	mail($mailTo, $subject, $finalmessage, $headers);
-	header("Location: contact.html?mailsend");
+if(!$con) {
+	die("Connection failed: ".mysqli_connect_error());
 }
 
-echo "Success!";
+if(isset($_POST['submit'])) {
+	$fname = $_POST['firstname'];
+	$lname = $_POST['lastname'];
+	$email = $_POST['email'];
+	$subject = $_POST['subject'];
+	$message = $_POST['message'];
+
+	$sql = "INSERT INTO info (first_name, last_name, email, subject, message) VALUES ('$fname', '$lname', '$email', '$subject', '$message')";
+
+	if(mysqli_query($con, $sql)) {
+		echo "Submitted!";
+	}
+	else {
+		echo "Error: ".$sql."<br>".mysqli_error($con);
+	}
+	mysqli_close($con);
+}
+
+
 
 ?>
 
