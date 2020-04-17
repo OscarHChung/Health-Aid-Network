@@ -2,17 +2,19 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Donate</title>
+<title>Request</title>
 <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
 
 <body>
 	<div class="topnav">
+		<a id="logolink" href="index.html"><img  id="logo" border="0" alt="Health Aid Network" src="logo.png">
+		</a>
+		<a id="title" href="index.html"><h3>Health Aid Network</h3></a>
 		<div class="topnav-right">
 	  		<a href="contact.html">Contact Us</a>
-	   	 	<a href="news.html">Recent News</a>
 	   	 	<a class="active" href="request.html">Request</a>
-	   	 	<a href="donate.html">Donate</a>
+	   	 	<a href="donate.php">Donate</a>
 	    	<a href="index.html">Home</a>
 	    </div>
 	</div>
@@ -23,22 +25,30 @@
 			<h1>Request</h1>
 		</div>
 
-		<form action="submittedrequest.php" method="post" id="request-form">
+		<form action="request.php" method="post" id="request-form" autocomplete="off">
 			<label for="hname" class="bold">Hospital Name</label><br>
 			<input type="text" id="hname" name="hospitalname" placeholder="Hospital's name" required>
 			<p class="bold">Items Needed:</p>
 
-			<input type="checkbox" id="blood-drive" name="blood-drive" value="blood=drive">
-			<label for="blood-drive">Blood Drive</label><br>
+			<input type="checkbox" id="blood-drive" name="blood-drive" value="blood-drive">
+			<label for="blood-drive">Blood(Blood Drive)</label><br>
 			<input type="checkbox" id="gloves" name="gloves" value="gloves">
 			<label for="gloves">Gloves</label><br>
+			<input type="checkbox" id="nonlatex" name="nonlatex" value="nonlatex">
+			<label for="nonlatex">Non-Latex Gloves</label><br>
 			<input type="checkbox" id="masks" name="masks" value="masks">
 			<label for="masks">Masks</label><br>
 			<input type="checkbox" id="ventilators" name="ventilators" value="ventilators">
-			<label for="ventilators">Ventilators</label><br><br>
+			<label for="ventilators">Ventilators</label><br>
+			<input type="checkbox" id="food" name="food" value="food">
+			<label for="food">Food(For Medical Staff)</label><br>
+			<input type="checkbox" id="gowns" name="gowns" value="gowns">
+			<label for="gowns">Disposable Surgical Gowns</label><br>
+			<input type="checkbox" id="caps" name="caps" value="cap">
+			<label for="caps">Disposable Surgical Caps</label><br><br>
 
 			<label for="other" class="bold">Other Item</label><br>
-			<input type="text" id="other" name="other" placeholder="Item" required><br>
+			<input type="text" id="other" name="other" placeholder="Item"><br>
 			<label for="address" class="bold">Hospital Address</label><br>
 			<input type="text" id="address" name="address" placeholder="Address" required><br>
 			<input type="submit" value="Request" name="submit">
