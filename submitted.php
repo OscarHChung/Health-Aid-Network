@@ -30,7 +30,7 @@ if(isset($_POST['submit'])) {
 	$sql = "INSERT INTO info (first_name, last_name, email, subject, message) VALUES ('$fname', '$lname', '$email', '$subject', '$message')";
 
 	if(mysqli_query($con, $sql)) {
-		echo "Submitted!";
+		header('Location:truesubmit.html');
 	}
 	else {
 		echo "Error: ".$sql."<br>".mysqli_error($con);
