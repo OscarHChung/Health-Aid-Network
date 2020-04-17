@@ -72,8 +72,9 @@ function initMap() {
             description += "Ventilators <br>";
           }
           if(othert != null) {
-            description += othert;
+            description += othert + "<br>";
           }
+          description += "<a target='_blank' href='https://maps.google.com/?q=" + address + "'>Get Directions</a>";
           infowindow.setContent(description);
           infowindow.open(map, marker);
       }
