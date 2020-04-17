@@ -14,33 +14,35 @@ body {
 .header {
 	color: #808080;
 	text-align: center;
-	margin-top: 40px;
+	margin-top: 80px;
 	margin-bottom: 60px;
 }
 
 .topnav {
+  max-height: 64px;
+  font-weight: bold;
+  border-bottom: 1px solid #c4c4c4;
+  width: 100%;
+  z-index: 500;
+  right: 0;
+  position: fixed;
   border-radius: 0px;
   overflow: hidden;
-  background-color: #333;
+  background-color: #eeeeee;
 }
 
 .topnav a {
 	border: 0px;
   float: left;
-  color: #f2f2f2;
+  color: #595959;
   text-align: center;
   padding: 20px 20px;
   text-decoration: none;
   font-size: 20px;
 }
 
-.topnav a.active {
-  background-color: #1f79ad;
-  color: white;
-}
-
 .topnav a:hover {
-  background-color: #2288c3;
+  color: #2288c3;
 }
 
 .topnav-right a {
@@ -117,6 +119,7 @@ a {
 }
 
 #map {
+  border-radius: 30px;
   margin: 20px auto 35px auto;
   height: 600px;
   width: 70%;
@@ -134,6 +137,7 @@ a {
   font-size: 16px;
   cursor: pointer;
   outline: none;
+  border-radius: 10px;
 }
 
 #closest-location:hover {
@@ -151,4 +155,25 @@ a {
 
 #footer {
   margin-top: 100px;
+}
+
+#photo {
+  border-radius: 20px;
+}
+
+#logo {
+  width: 50px;
+  height: 50px;
+}
+
+#logolink {
+  padding: 5px 0px 5px 20px;
+}
+
+#title {
+  padding: 0px 0px 5px 5px;
+}
+
+#title:hover {
+  color: #595959;
 }
