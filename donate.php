@@ -87,7 +87,7 @@
 			<div id="map"></div>
 			<script type="text/javascript" src="scripts/donate.js"></script>
 			<script type="text/javascript" data-main="scripts/donate.js" src="./node_modules/requirejs/require.js"></script>
-			<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOMKo4f38-5wpqt-SpWoffA4ZGDCsTr60&callback=initMap"/></script>
+			<script async defer src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap"/></script>
 
 			<button id="closest-location">Find Nearest Location</button>
 
